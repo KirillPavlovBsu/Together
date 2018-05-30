@@ -7,10 +7,11 @@
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/,.ico">
+    <link rel="stylesheet" href="../src/index.css">
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
-    <title>React App</title>
+    <title>Meals</title>
 </head>
 
 <body>
@@ -19,63 +20,66 @@
     </noscript>
     <div class="page">
         <div class="header">
-            <div class="events">
-                <H2>Events</H2>
+            <div class="meals">
+                <a href="#"><h1>Meals</h1></a></div>
+            <div class="profiles">
+                <h1>Profiles</h1>
+                <div class="dropdownprof">
+                    <a href="#">National</a>
+                    <a href="#">Ameriacan</a>
+                    <a href="#">Asian</a>
+                    <a href="#">Eastern</a>
+                    <a href="#">Italian</a>
+                    <a href="#">Exotic</a>
+                </div>
             </div>
-            <div class="add">
-                <H4>+ Own Events</H4>
+            <div class="categories">
+                <h1>Categories</h1>
+                <div class="dropdowncat">
+                    <div class="left">
+                        <div id="good">Good</div>
+                        <div id="normal">Normal</div>
+                        <div id="bad">Bad</div>
+                    </div>
+                    <div class="right">Criterion</div>
+                    <div class="line"><input name="gp" type="radio" value="1"><input name="np" type="radio" value="2"><input name="bp" type="radio" value="3"></div>
+                    <div class="pricecat">Price cathegory</div>
+                    <div class="line"><input name="gs" type="radio" value="1"><input name="ns" type="radio" value="2"><input name="bs" type="radio" value="3"></div>
+                    <div class="servicecat">Service</div>
+                     <div class="line"><input name="gl" type="radio" value="1"><input name="nl" type="radio" value="2"><input name="bl" type="radio" value="3"></div>
+                     <div class="locationcat">Location</div>
+                </div>
             </div>
         </div>
-        <div class="location">
-            <div class="loc-icon"><img id="licon" src="img/marcicon.png" alt="menuicon"></div>
-            <div class="certain-loc"><span>Minsk, Belarus</span></div>
-            <div class="calen-icon"><img id="licon" src="img/calicon.png" alt="menuicon"></div>
-            <div class="calendar">
-                JS Date is here
-            </div>
-        </div>
-        <div class="elems"><div id="root"></div>
-        </div>
-        <!-- Scroll img (test) -->
-        <div class="footer">
-            <div class="evnt">
-                <div class="icon">
-                	<img id="licon" src="img/eventsicon.png" alt="menuicon">
+        <div class="info">
+            <div class="elems">
+                <div class="elem" id="opened">
+                    <div class="dish">Sushi</div>
+                    <div class="value">---------------</div>
                 </div>
-                <div class="text">
-                    <span>Events</span>
+                <div class="hidden">
+                    <div class="blockname">
+                        <div class="dishn">
+                            <h3>Dish</h3></div>
+                        <div class="restarauntn">
+                            <h3>Restaraunt</h3></div>
+                        <div class="reviewsn">
+                            <h3>Reviews</h3></div>
+                    </div>
+                    <div class="block" id="root">
+                    </div>
                 </div>
-            </div>
-            <div class="contacts">
-                <div class="icon">
-                	<img id="licon" src="img/groupicon.png" alt="menuicon">
+                <div class="elem" id="f2">
+                    <div class="dish">Soups</div>
+                    <div class="value"></div>
                 </div>
-                <div class="text">
-                    <span>Contacts</span>
+                <div class="elem" id="f3">
+                    <div class="dish">Bourgers</div>
+                    <div class="value"></div>
                 </div>
-            </div>
-            <div class="cal">
-                <div class="icon">
-                	<img id="licon" src="img/calicon.png" alt="menuicon">
-                </div>
-                <div class="text">
-                    <span>Calendar</span>
-                </div>
-            </div>
-            <div class="clubs">
-                <div class="icon">
-                	<img id="licon" src="img/coctailicon.png" alt="menuicon">
-                </div>
-                <div class="text">
-                    <span>Clubs</span>
-                </div>
-            </div>
-            <div class="more">
-                <div class="icon">
-                	<img id="licon" src="img/menuicon.png" alt="menuicon">
-                </div>
-                <div class="text">
-                    <span>More</span>
+                <div class="elem" id="f4">
+                    <div class="dish">Kebab</div>
+                    <div class="value"></div>
                 </div>
             </div>
         </div>
@@ -83,27 +87,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-<!--<div>
-    <div class="img">{article.picture}</div>
-    <div class="info">
-        <div class="left">
-            <div class="month">{article.month}</div>
-            <div class="day">{article.day}</div>
-            <div class="cost">{article.price}</div>
-            <div class="members" ></div>
-            <div class="rate"></div>     
-        </div>
-        <div class="rigth">
-            <div class="heading"></div>
-            <div class="loc-pic"></div>
-            <div class="place"></div>
-            <div class="description"></div>
-        </div>
-    </div>
-</div>-->

@@ -1,110 +1,157 @@
+a {
+	text-decoration: none;
+}
+body {
+	background-color: #a1a6af;
+	font-family: "Trebuchet MS"
+}
+
 .header {
+	margin-left: 12%;
 	display: grid;
-	grid-template-columns: 68% 32%;
-	margin: 0px;
+	grid-template-columns: 25% 25% 25%;
+	grid-gap: 40px;
 }
 
-.events {
-	border: 2px solid black;
+.meals, .profiles, .categories {
+	background-color: #474a50;
 }
 
-.events h2{
-	font-size: 25px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 20px;
+.dropdownprof, .dropdowncat {
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdownprof a, .dropdowncat a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
 }
 
-.add {
-	border: 2px solid black;
-	border-left: none;
+.dropdownprof a:hover, .dropdowncat a:hover 
+{background-color: #f1f1f1}
+
+.profiles:hover .dropdownprof{
+    display: block;
+    width: 21.75%;
 }
 
-.add h4 {
-	font-size: 17px;
-	margin-top: 10px;
-	margin-bottom: 5px;
-	margin-left: 3px;
-}
-
-.location {
-	margin-top: 5px;
-	border: 2px solid black;
+.categories:hover .dropdowncat{
 	display: grid;
-	grid-template-columns: 15% 85%;
-	grid-template-rows: 40px 40px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+    width: 30%;
+    margin-left: -8.3%;
 }
 
-.certain-loc, .calendar {
-	font-size: 18px;
-	margin-top: 8px;
+.left, .line {
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr;
 }
 
-.loc-icon img {
-	width: 30px;
-	margin-top: 5px;
-	margin-left: 10px;
+.line input{
+	margin-left: 30%;
 }
 
-.calen-icon img {
-	width: 30px;
-	margin-top: 5px;
-	margin-left: 11px;
+.pricecat, .servicecat, .locationcat {
+	margin-left: 5%;
+}
+
+.right {
+	margin-left: 20%;
+}
+
+#bad {
+	margin-left: 20%;
+}
+
+.header h1 {
+	color: white;
+	margin-left: 30%;
+	width: 180px;
+}
+
+.categories h1 {
+	margin-left: 24%;
+}
+
+.profiles:hover, .meals:hover, .categories:hover {
+	background-color: #141c28;
+	transition: 0.2s;
+}
+
+.info {
+	overflow-y: scroll;
+	margin-top: 40px;
+	margin-left: 5%;
+	width: 90%;
+	height: 620px;
+	background-color: white;
+	border-radius: 5px;
 }
 
 .elems {
-	border: 2px solid black;
-	height: 400px;
-	margin-top: 5px;
-	overflow-y: scroll;
-}
-
-/*Just deleting markers*/
-
-#root li {
-    list-style-type: none;
-}
-
-.footer {
-	margin-top: 5px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 70% 30%;
-	font-size: 18px;
+	grid-template-rows: 20% 20% 20% 20%;
 }
 
-.contacts, .cal, .clubs, .more {
-	border: 2px solid black;
-	border-left: none;
+.elem, .hidden {
+	margin-top:20px;
+	margin-left: 5%;
+	width: 90%;
+	height: 70px;
+	background-color: #d3d7df;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
 }
 
-.evnt {
-	border: 2px solid black;
+.dish {
+	font-size: 23px;
+	margin-left: 2%;
+	margin-top: 22px;
 }
 
-.icon img{
-	width: 40px;
-	margin-left: 12px;
-	margin-top: 4px;
+.value {
+	margin-left: 25%;
+	margin-top: 22px;
 }
 
-.footer span {
-	font-size: 17px;
-	font-weight: bold;
+.hidden {
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+	margin-top: 0;
+	height: auto;
 }
 
-.evnt span {
-	margin-left: 8px;
+.blockname, .block {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.contacts span {
-	margin-left: 2px;
+.blockname h3{
+	 margin-left: 35%;
+	 margin-bottom: 0px;
 }
 
-.clubs span {
-	margin-left: 10px;
+.unit {
+	padding-top: 4px;
+	margin-bottom: 12px;
+	margin-left: 28%;
+}
+.dishb, .restarauntb, .reviewsb {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
 }
 
-.more span {
-	margin-left: 11px;
+.restarauntb {
+	margin-left: 10%;
+}
+
+.reviewsb {
+	margin-left: 20%;
 }
