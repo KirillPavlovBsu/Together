@@ -116,35 +116,57 @@ body {
 	margin-top: 22px;
 }
 
+#opened {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dish {
+    user-select: none;
+}
+
+.dish:hover {
+    cursor: pointer;
+}
+
 .value {
 	margin-left: 25%;
 	margin-top: 22px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .hidden {
-	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr;
 	margin-top: 0;
-	height: auto;
+	height:inherit;
 }
 
 .blockname, .block {
-	display: grid;
+	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .blockname h3{
-	 margin-left: 35%;
+	 margin-left: 40%;
 	 margin-bottom: 0px;
 }
 
 .unit {
 	padding-top: 4px;
 	margin-bottom: 12px;
-	margin-left: 28%;
+    text-align: center;
+}
+
+.spisok li {
+    list-style-type: none;
 }
 .dishb, .restarauntb, .reviewsb {
-	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 }
 

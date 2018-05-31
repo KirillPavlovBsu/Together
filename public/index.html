@@ -25,12 +25,12 @@
             <div class="profiles">
                 <h1>Profiles</h1>
                 <div class="dropdownprof">
-                    <a href="#">National</a>
-                    <a href="#">Ameriacan</a>
-                    <a href="#">Asian</a>
-                    <a href="#">Eastern</a>
-                    <a href="#">Italian</a>
-                    <a href="#">Exotic</a>
+                    <a class="nationalSort">National</a>
+                    <a class="americanSort">American</a>
+                    <a class="asianSort">Asian</a>
+                    <a class="easternSort">Eastern</a>
+                    <a class="italianSort">Italian</a>
+                    <a class="exoticSort">Exotic</a>
                 </div>
             </div>
             <div class="categories">
@@ -54,8 +54,10 @@
         <div class="info">
             <div class="elems">
                 <div class="elem" id="opened">
-                    <div class="dish">Sushi</div>
-                    <div class="value">---------------</div>
+                    <div class="dish" onclick="toggleSushi()">Sushi</div>
+                    <div class="value">
+                    От<input id="rangeMin" class="range" type="range" min="0" max="100" value="0" step="5" oninput="onInputRange()"><p class="valueRange" id="valueRangeMin">0</p>
+                    До<input id="rangeMax" class="range" type="range" min="0" max="100" value="100" step="5" oninput="onInputRange()"><p class="valueRange" id="valueRangeMax">100</p></div>
                 </div>
                 <div class="hidden">
                     <div class="blockname">
@@ -66,7 +68,7 @@
                         <div class="reviewsn">
                             <h3>Reviews</h3></div>
                     </div>
-                    <div class="block" id="root">
+                    <div id="root">
                     </div>
                 </div>
                 <div class="elem" id="f2">
@@ -84,6 +86,23 @@
             </div>
         </div>
     </div>
+    <script src="../src/Components/ButtonClick.js"></script>
+    <script type="text/javascript">
+    var hidden_NODE = document.querySelector('.hidden');
+var dish_NODE = document.querySelector('.dish');
+var counter = 0;
+
+
+function toggleSushi() {
+    if (counter % 2 != 0) {
+        hidden_NODE.style.display='none';
+    }
+    else {
+        hidden_NODE.removeAttribute('style');
+    }
+    counter++;
+}
+    </script>
 </body>
 
 </html>
